@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Three-Part Form</title>
+  <link rel="stylesheet" href="swiper.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sam Sondhi</h1>
+  </header>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <h2>School Information</h2>
+        <form id="school-form">
+          <label for="schoolName">Name of School</label>
+          <input type="text" id="schoolName" name="schoolName" required>
+          <label for="dateOfJoining">Date of Joining</label>
+          <input type="date" id="dateOfJoining" name="dateOfJoining" required>
+          <label>Graduated</label>
+          <input type="radio" id="graduatedYes" name="graduated" value="yes" required>
+          <label for="graduatedYes">Yes</label>
+          <input type="radio" id="graduatedNo" name="graduated" value="no" required>
+          <label for="graduatedNo">No</label>
+        </form>
+      </div>
+      <div class="swiper-slide">
+        <h2>Personal Information</h2>
+        <form id="personal-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+          <label for="zipCode">Zip code (Canada)</label>
+          <input type="text" id="zipCode" name="zipCode" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]">
+        </form>
+      </div>
+      <div class="swiper-slide">
+        <h2>Payment Information</h2>
+        <form id="payment-form">
+          <label for="creditCardNumber">Credit Card Number</label>
+          <input type="text" id="creditCardNumber" name="creditCardNumber" required pattern="[0-9]{10}">
+          <label for="expirationDate">Expiration Date</label>
+          <input type="date" id="expirationDate" name="expirationDate" required>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" required pattern="[0-9]{3}">
+        </form>
+      </div>
+    </div>
+  </div>
+  <button class="swiper-button-next">Next</button>
+  <button class="swiper-button-prev">Previous</button>
+  <button type="submit">Submit</button>
+  <script src="swiper.min.js"></script>
+  <script src="validate.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

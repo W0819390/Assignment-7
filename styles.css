@@ -1,0 +1,103 @@
+body {
+  /* Mobile Background Color */
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* Mobile Background Color */
+  background-color: #000000;
+  text-align: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.swiper-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile-First Approach (up to 600px width) */
+.swiper-slide form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-slide form label {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 5px;
+  grid-column: auto;
+  color: #333;
+}
+
+.swiper-slide form input[type="radio"] {
+  grid-column: auto;
+}
+
+/* Tablet and Desktop (above 601px) */
+@media (min-width: 601px) {
+  body {
+      /* Tablet/Desktop Background Color */
+      background-color: #ff0000;
+  }
+
+  header {
+      /* Tablet/Desktop Background Color */
+      background-color: #ff0000;
+  }
+
+  .swiper-slide form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+  }
+
+  .swiper-slide form label {
+      /* Mobile Font Size */
+      font-size: 16px;
+      text-align: right;
+      grid-column: 1 / 2;
+      color: #333;
+  }
+
+  .swiper-slide form input[type="radio"] {
+      grid-column: 2 / 3;
+      justify-self: start;
+  }
+}
+
+/* Full-width input fields for mobile except radio buttons */
+.swiper-slide form input:not([type="radio"]) {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Stylish button for form submission */
+.swiper-slide form button[type="submit"] {
+  background-color: #0074D9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-slide form button[type="submit"]:hover {
+  background-color: #0056A7;
+}
